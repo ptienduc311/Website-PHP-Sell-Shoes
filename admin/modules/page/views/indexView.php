@@ -6,7 +6,6 @@ foreach($list_data_page as &$data){
 }
 unset($data);
 // show_array($list_data_page);
-
 ?>
 
 <?php
@@ -21,7 +20,7 @@ get_header();
             <div class="section" id="title-page">
                 <div class="clearfix">
                     <h3 id="index" class="fl-left">Danh sách trang</h3>
-                    <a href="?mod=page&action=add" title="" id="add-new" class="fl-left">Thêm mới</a>
+                    <a href="trang/them.html" title="" id="add-new" class="fl-left">Thêm mới</a>
                 </div>
             </div>
             <div class="section" id="detail-page">

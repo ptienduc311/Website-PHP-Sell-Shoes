@@ -40,19 +40,3 @@ if (is_array($autoload)) {
 db_connect($db);
 
 require COREPATH . DIRECTORY_SEPARATOR . 'router.php';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

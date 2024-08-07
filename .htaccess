@@ -1,2 +1,16 @@
 RewriteEngine On
-RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=page&controller=index&action=detail&id=$2&slug=$1
+
+RewriteRule ^trang-chu$ ?mod=home
+
+RewriteRule ^([a-zA-Z0-9_-]+).html$ ?mod=page&action=contact&slug=$1
+
+RewriteRule ^bai-viet$ ?mod=post 
+RewriteRule ^bai-viet/([a-zA-Z0-9_-]+).html$ ?mod=post&action=detail&slug=$1
+
+RewriteRule ^san-pham$ ?mod=product 
+#RewriteRule ^san-pham/([a-zA-Z0-9_-]+).html$ ?mod=product&action=detail&slug=$1
+#RewriteRule ^san-pham/([a-zA-Z0-9_-]+)$ ?mod=product&action=productCat&slug=$1
+
+RewriteRule ^dang-nhap$ ?mod=users&action=login
+RewriteRule ^dang-ky$ ?mod=users&action=register
+RewriteRule ^quen-mat-khau$ ?mod=users&action=resetPass

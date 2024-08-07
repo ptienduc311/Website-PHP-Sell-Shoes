@@ -32,7 +32,9 @@ function indexAction()
 }
 function addAction()
 {
-    global $error, $product_id, $product_name, $product_code, $product_initial, $product_price, $size, $product_parameter, $product_detail, $stock_quantity, $is_featured, $is_selling, $category_id, $product_status;
+    global $error, $product_id, $product_name, $product_code, $product_slug,
+    $product_initial, $product_price, $size, $product_parameter, $product_detail, 
+    $stock_quantity, $is_featured, $is_selling, $category_id, $product_status;
     if (isset($_POST['btn_add'])) {
         #Valdation tên sản phẩm
         if (empty($_POST['product_name'])) {
@@ -45,6 +47,12 @@ function addAction()
             $error['product_code'] = "Mã sản phẩm không được để trống";
         } else {
             $product_code = $_POST['product_code'];
+        }
+        #Validation slug sản phẩm
+        if (empty($_POST['product_slug'])) {
+            $error['product_slug'] = "Slug sản phẩm không được để trống";
+        } else {
+            $product_slug = $_POST['product_slug'];
         }
         #Validation giá ban đầu của sản phẩm
         if (empty($_POST['product_initial'])) {
@@ -111,6 +119,7 @@ function addAction()
             $data_product = [
                 'product_name' => $product_name,
                 'product_code' => $product_code,
+                'product_slug' => $product_slug,
                 'product_initial' => $product_initial,
                 'product_price' => $product_price,
                 'product_parameter' => $product_parameter,
@@ -160,7 +169,8 @@ function addAction()
 function updateAction()
 {
     $id = $_GET['id'];
-    global $error, $product_id, $product_name, $product_code, $product_initial, $product_price, $size, $product_parameter, $product_detail, $stock_quantity, $is_featured, $category_id, $product_status;
+    global $error, $product_id, $product_name, $product_code, $product_slug, $product_initial, $product_price,
+    $product_parameter, $product_detail, $stock_quantity, $is_featured, $category_id, $product_status;
     if (isset($_POST['btn_update'])) {
         #Valdation tên sản phẩm
         if (empty($_POST['product_name'])) {
@@ -173,6 +183,12 @@ function updateAction()
             $error['product_code'] = "Mã sản phẩm không được để trống";
         } else {
             $product_code = $_POST['product_code'];
+        }
+        #Validation mã sản phẩm
+        if (empty($_POST['product_slug'])) {
+            $error['product_slug'] = "Slug sản phẩm không được để trống";
+        } else {
+            $product_slug = $_POST['product_slug'];
         }
         #Validation giá ban đầu của sản phẩm
         if (empty($_POST['product_initial'])) {
@@ -227,6 +243,7 @@ function updateAction()
             $data_product = [
                 'product_name' => $product_name,
                 'product_code' => $product_code,
+                'product_slug' => $product_slug,
                 'product_initial' => $product_initial,
                 'product_price' => $product_price,
                 'product_parameter' => $product_parameter,

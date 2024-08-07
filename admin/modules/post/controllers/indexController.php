@@ -14,13 +14,19 @@ function indexAction()
 
 function addAction()
 {
-    global $post_title, $post_excerpt, $post_content, $category_id, $image_id, $post_status, $error;
+    global $post_title, $post_slug, $post_excerpt, $post_content, $category_id, $image_id, $post_status, $error;
     if (isset($_POST['btn-submit'])) {
         #Valdation tiêu đề
         if (empty($_POST['post_title'])) {
             $error['post_title'] = "Tiêu đề không được để trống";
         } else {
             $post_title = $_POST['post_title'];
+        }
+        #Valdation slug
+        if (empty($_POST['post_slug'])) {
+            $error['post_slug'] = "Vui lòng nhập slug trang";
+        } else {
+            $post_slug = $_POST['post_slug'];
         }
         #validation mô tả ngắn
         if (empty($_POST['post_excerpt'])) {
@@ -60,6 +66,7 @@ function addAction()
         if (empty($error)) {
             $data_post = [
                 'post_title' => $post_title,
+                'post_slug' => $post_slug,
                 'post_excerpt' => $post_excerpt,
                 'post_content' => $post_content,
                 'post_status' => $post_status,
@@ -92,6 +99,12 @@ function updateAction()
         } else {
             $post_title = $_POST['post_title'];
         }
+        #Valdation slug
+        if (empty($_POST['post_slug'])) {
+            $error['post_slug'] = "Vui lòng nhập slug trang";
+        } else {
+            $post_slug = create_slug($_POST['post_slug']);
+        }
         #validation mô tả ngắn
         if (empty($_POST['post_excerpt'])) {
             $post_excerpt = NULL;
@@ -122,6 +135,7 @@ function updateAction()
         if (empty($error)) {
             $data_post = [
                 'post_title' => $post_title,
+                'post_slug'=>$post_slug,
                 'post_excerpt' => $post_excerpt,
                 'post_content' => $post_content,
                 'post_status' => $post_status,

@@ -5,7 +5,7 @@ $data_product_cat = get_data_product_cat();
 $data_product_featured = get_featured_products();
 $data_product_selling = get_selling_products();
 $data_sliders = get_all_sliders();
-// show_array($_SESSION);
+// show_array($data_product_featured);
 ?>
 
 <div id="main-content-wp" class="home-page clearfix">
@@ -77,10 +77,10 @@ $data_sliders = get_all_sliders();
                             $featured_img = get_image_default($item['product_id']);
                         ?>
                             <li>
-                                <a href="?page=detail_product" title="" class="thumbnail">
+                                <a href="<?php echo $item['url']; ?>" title="" class="thumbnail">
                                     <img src="<?php echo base_url(); ?>/admin/<?php echo $featured_img['image_url']; ?>">
                                 </a>
-                                <a href="?page=detail_product" title="" class="product-name"><?php echo $item['product_name'] ?></a>
+                                <a href="<?php echo $item['url']; ?>" title="" class="product-name"><?php echo $item['product_name'] ?></a>
                                 <div class="price">
                                     <span class="new"><?php echo currency_format($item['product_price']); ?></span>
                                     <span class="old"><?php echo currency_format($item['product_initial']); ?></span>
@@ -111,10 +111,10 @@ $data_sliders = get_all_sliders();
                                 $featured_img = get_image_default($data['product_id']);
                             ?>
                                 <li>
-                                    <a href="?page=detail_product" title="" class="thumbnail">
+                                    <a href="<?php echo $data['url']; ?>" title="" class="thumbnail">
                                         <img src="<?php echo base_url(); ?>/admin/<?php echo $featured_img['image_url']; ?>">
                                     </a>
-                                    <a href="?page=detail_product" title="" class="product-name"><?php echo $data['product_name']; ?></a>
+                                    <a href="<?php echo $data['url']; ?>" title="" class="product-name"><?php echo $data['product_name']; ?></a>
                                     <div class="price">
                                         <span class="new"><?php echo currency_format($data['product_price']); ?></span>
                                         <span class="old"><?php echo currency_format($data['product_initial']); ?></span>
@@ -165,11 +165,11 @@ $data_sliders = get_all_sliders();
                             $featured_img = get_image_default($item['product_id']);
                         ?>
                             <li class="clearfix">
-                                <a href="?page=detail_product" title="" class="thumb fl-left">
+                                <a href="<?php echo $item['url']; ?>" title="" class="thumb fl-left">
                                     <img src="<?php echo base_url(); ?>/admin/<?php echo $featured_img['image_url']; ?>" alt="">
                                 </a>
                                 <div class="info fl-right">
-                                    <a href="?page=detail_product" title="" class="product-name"><?php echo $item['product_name']; ?></a>
+                                    <a href="<?php echo $item['url']; ?>" title="" class="product-name"><?php echo $item['product_name']; ?></a>
                                     <div class="price">
                                         <span class="new"><?php echo currency_format($item['product_price']); ?></span>
                                         <span class="old"><?php echo currency_format($item['product_initial']); ?></span>

@@ -50,7 +50,7 @@ $data_product_same_cat = get_data_product_by_category_id($data_product['category
                         </div>
                     </div>
                     <div class="thumb-respon-wp fl-left">
-                        <img src="public/images/img-pro-01.png" alt="">
+                        <img src="<?php echo base_url(); ?>/admin/<?php echo $image_default['image_url']; ?>" alt="">
                     </div>
                     <form action="" method="post">
                         <div class="info fl-right">
@@ -181,7 +181,7 @@ $data_product_same_cat = get_data_product_by_category_id($data_product['category
 
 <?php
 get_footer();
-show_array($data_product);
+// show_array($data_product);
 // show_array($image_default);
 // show_array($list_image);
 // show_array($list_size);

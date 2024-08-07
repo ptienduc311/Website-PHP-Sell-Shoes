@@ -22,6 +22,9 @@ get_header();
                         <label for="title">Tiêu đề</label>
                         <input type="text" name="post_title" id="title">
                         <p class="error"> <?php echo form_error('post_title'); ?></p>
+                        <label for="slug">Slug ( Friendly_url )</label>
+                        <input type="text" name="post_slug" id="slug">
+                        <p class="error"> <?php echo form_error('post_slug'); ?></p>
                         <label for="post_excerpt">Mô tả ngắn</label>
                         <input type="text" name="post_excerpt" id="post_excerpt">
                         <label for="desc">Nội dung bài viết</label>

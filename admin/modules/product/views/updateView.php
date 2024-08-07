@@ -35,6 +35,10 @@ $list_size = get_data_product_size_by_id($id);
                         <input type="text" name="product_code" id="product_code" value="<?php echo $info_product['product_code']; ?>">
                         <p class="error"> <?php echo form_error('product_code'); ?></p>
 
+                        <label for="product_slug">Slug sản phẩm</label>
+                        <input type="text" name="product_slug" id="product_slug" value="<?php echo $info_product['product_slug']; ?>">
+                        <p class="error"> <?php echo form_error('product_slug'); ?></p>
+
                         <label for="product_initial">Giá gốc sản phẩm</label>
                         <input type="text" name="product_initial" id="product_initial" value="<?php echo $info_product['product_initial']; ?>">
                         <p class="error"> <?php echo form_error('product_initial'); ?></p>

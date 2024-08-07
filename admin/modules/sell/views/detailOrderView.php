@@ -36,7 +36,7 @@ $order_detail = get_order_detail($id);
                                 <td><?php echo $info_customer['address']; ?></td>
                                 <td><?php echo $info_customer['phone_number']; ?></td>
                                 <td><?php echo $info_customer['email']; ?></td>
-                                <td><?php echo $info_customer['created_at']; ?></td>
+                                <td><?php echo $data_order['order_date']; ?></td>
                                 <td><?php echo $info_customer['note']; ?></td>
                             </tr>
                             <!-- Thêm các dòng khác tương tự -->
@@ -57,7 +57,7 @@ $order_detail = get_order_detail($id);
                                     <option value="">Cập nhật tình trạng đơn hàng</option>
                                     <option value="1">Chưa xử lý</option>
                                     <option value="2">Đang xử lý</option>
-                                    <option value="3">Đã giao</option>
+                                    <option value="3">Đang vận chuyển</option>
                                     <option value="4">Hoàn thành</option>
                                     <option value="5">Đã bị hủy</option>
                                 </select>
@@ -92,6 +92,7 @@ $order_detail = get_order_detail($id);
                             <tr>
                                 <th>Ảnh</th>
                                 <th>Tên</th>
+                                <th>Size</th>
                                 <th>Số lượng</th>
                                 <th>Giá</th>
                                 <th>Thành tiền</th>
@@ -102,8 +103,9 @@ $order_detail = get_order_detail($id);
                             foreach ($order_detail as $item) {
                             ?>
                                 <tr>
-                                    <td><img src="<?php echo $item['image_url']; ?>" alt="<?php echo $item['product_name']; ?>"></td>
+                                    <td><img src="<?php echo $item['image_url']; ?>" id="proudct-thumb-img" alt="<?php echo $item['product_name']; ?>"></td>
                                     <td><?php echo $item['product_name']; ?></td>
+                                    <td><?php echo $item['size']; ?></td>
                                     <td><?php echo $item['quantity']; ?></td>
                                     <td><?php echo currency_format($item['price']); ?></td>
                                     <td><?php echo currency_format($item['price'] * $item['quantity']); ?></td>

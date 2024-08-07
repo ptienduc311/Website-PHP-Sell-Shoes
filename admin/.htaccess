@@ -1,2 +1,25 @@
 RewriteEngine On
-RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=page&controller=index&action=detail&id=$2&slug=$1
+RewriteRule ^trang$ ?mod=page
+RewriteRule ^trang/([a-zA-Z0-9_-]+).html$ ?mod=page&action=add
+RewriteRule ^trang/([a-zA-Z0-9_-]+).html$ ?mod=page&action=update
+
+RewriteRule ^bai-viet$ ?mod=post
+RewriteRule ^bai-viet/them.html$ ?mod=post&controller=index&action=add
+RewriteRule ^them-danh-muc-bai-viet.html$ ?mod=post&controller=index&action=addCat
+RewriteRule ^danh-muc-bai-viet$ ?mod=post&controller=index&action=category
+
+RewriteRule ^san-pham$ ?mod=product
+RewriteRule ^san-pham/them.html$ ?mod=product&action=add
+RewriteRule ^them-danh-muc-san-pham.html ?mod=product&controller=cat&action=addCat
+RewriteRule ^danh-muc-san-pham$ ?mod=product&controller=cat&action=category
+RewriteRule ^them-size.html ?mod=product&controller=cat&action=size
+
+RewriteRule ^danh-sach-don-hang$ ?mod=sell&action=order
+RewriteRule ^danh-sach-khach-hang$ ?mod=sell&action=customer
+
+RewriteRule ^danh-sach-slider$ ?mod=slider
+RewriteRule ^slider/them.html$ ?mod=slider&action=add
+
+
+
+

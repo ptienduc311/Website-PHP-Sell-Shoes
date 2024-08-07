@@ -153,9 +153,7 @@
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <!-- <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                                    <span class="caret"></span></button> -->
-                                <div id="member-btn"type="button" data-toggle="dropdown">
+                                <div id="member-btn" type="button" data-toggle="dropdown">
                                     <button class="about__box-icon" id="show-login">
                                         <span class="input-icon"><i class="fa fa-user"></i></span>
                                         <div class="member-name">
@@ -177,4 +175,3 @@
     </div>
     <div id="overlay"></div>
     <script src="public/js/login_logout.js"></script>
-    

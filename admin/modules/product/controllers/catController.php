@@ -19,13 +19,19 @@ function categoryAction()
 //Thêm danh mục sản phẩm
 function addCatAction()
 {
-    global $error, $category_name, $category_desc, $parent_id;
+    global $error, $category_name, $category_slug, $category_desc, $parent_id;
     if (isset($_POST['btn_add'])) {
         #Valdation tên danh mục sản phẩm
         if (empty($_POST['category_name'])) {
             $error['category_name'] = "Tên danh mục sản phẩm không được để trống";
         } else {
             $category_name = $_POST['category_name'];
+        }
+        #Validation slug danh mục sản phẩm
+        if (empty($_POST['category_slug'])) {
+            $error['category_slug'] = "Slug danh mục sản phẩm sản phẩm không được để trống";
+        } else {
+            $category_slug = $_POST['category_slug'];
         }
         #Validation mô tả danh mục sản phẩm
         if (empty($_POST['category_desc'])) {
@@ -42,6 +48,7 @@ function addCatAction()
         if (empty($error)) {
             $data = [
                 'category_name' => $category_name,
+                'category_slug' => $category_slug,
                 'category_desc' => $category_desc,
                 'parent_id' => $parent_id,
                 'created_by' => $_SESSION['username']

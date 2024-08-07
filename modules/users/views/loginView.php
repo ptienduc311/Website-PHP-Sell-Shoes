@@ -3,7 +3,7 @@ get_header("account");
 ?>
 
 <div class="container" id="container">
-    <a class="btn-home icon" href="?mod=home"><i class="fa-solid fa-house"></i></a>
+    <a class="btn-home icon" href="trang-chu"><i class="fa-solid fa-house"></i></a>
     <div class="form-container sign-in">
         <form action="" method="POST">
             <h1>Đăng nhập</h1>
@@ -23,7 +23,7 @@ get_header("account");
                 <input type="checkbox" id="remember-me" name="remember-me">
                 <label for="remember-me">Ghi nhớ đăng nhập</label>
             </div>
-            <a href="?mod=users&action=resetPass">Quên mật khẩu?</a>
+            <a href="quen-mat-khau">Quên mật khẩu?</a>
             <button type="submit" name="btn-login">Đăng nhập</button>
 
             <!-- <input type="submit" name="btn-login" value="Đăng nhập" class="btn-login" /> -->
@@ -34,7 +34,7 @@ get_header("account");
             <div class="toggle-panel toggle-right">
                 <h1>Chào bạn!</h1>
                 <p>Hãy đăng ký là thành viên để tận hưởng dịch vụ của chúng tôi</p>
-                <a href="?mod=users&action=register"><button class="hidden" id="register">Đăng ký</button></a>
+                <a href="dang-ky"><button class="hidden" id="register">Đăng ký</button></a>
             </div>
         </div>
     </div>

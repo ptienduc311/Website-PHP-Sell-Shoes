@@ -35,11 +35,19 @@ $data_cat_post = get_category_post();
                             foreach ($data_post as $item) {
                             ?>
                                 <li class="clearfix">
-                                    <a href="<?php echo $item['url']; ?>" title="" class="thumb fl-left">
+                                    <!-- <a href="<?php echo $item['url']; ?>" title="" class="thumb fl-left">
                                         <img src="<?php echo base_url(); ?>/admin/<?php echo $item['product_thumb']['image_url']; ?>" alt="">
                                     </a>
                                     <div class="info fl-right">
                                         <a href="<?php echo $item['url']; ?>" title="" class="title"><?php echo $item['post_title']; ?></a>
+                                        <span class="create-date"><?php echo $item['created_at']; ?></span>
+                                        <p class="desc"><?php echo $item['post_excerpt'] ?></p>
+                                    </div> -->
+                                    <a href="bai-viet/<?php echo create_slug($item['post_slug']); ?>.html" title="" class="thumb fl-left">
+                                        <img src="<?php echo base_url(); ?>admin/<?php echo $item['product_thumb']['image_url']; ?>" alt="">
+                                    </a>
+                                    <div class="info fl-right">
+                                        <a href="bai-viet/<?php echo $item['post_slug']; ?>.html" title="" class="title"><?php echo $item['post_title']; ?></a>
                                         <span class="create-date"><?php echo $item['created_at']; ?></span>
                                         <p class="desc"><?php echo $item['post_excerpt'] ?></p>
                                     </div>
@@ -54,21 +62,6 @@ $data_cat_post = get_category_post();
                 }
                 ?>
 
-            </div>
-            <div class="section" id="paging-wp">
-                <div class="section-detail">
-                    <ul class="list-item clearfix">
-                        <li>
-                            <a href="" title="">1</a>
-                        </li>
-                        <li>
-                            <a href="" title="">2</a>
-                        </li>
-                        <li>
-                            <a href="" title="">3</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
         <div class="sidebar fl-left">
@@ -132,8 +125,6 @@ $data_cat_post = get_category_post();
 
 <?php
 get_footer();
-foreach($data_cat_post as $data){
-    show_array($data);
-}
 // show_array($data_cat_post);
+// show_array(get_data_post_by_category_id(1));
 ?>

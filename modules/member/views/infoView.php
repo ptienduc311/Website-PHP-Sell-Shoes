@@ -127,7 +127,6 @@ $data_member = getMemberByUsername($_SESSION['username']);
         </div>
     </div>
 </div>
-</div>
 
 <?php
 get_footer();

@@ -1,5 +1,6 @@
 <?php
 get_header();
+
 ?>
 
 <div id="main-content-wp" class="add-cat-page">
@@ -17,6 +18,9 @@ get_header();
                         <label for="title">Tiêu đề</label>
                         <input type="text" name="page_title" id="title">
                         <p class="error"> <?php echo form_error('page_title'); ?></p>
+                        <label for="slug">Slug ( Friendly_url )</label>
+                        <input type="text" name="page_slug" id="slug">
+                        <p class="error"> <?php echo form_error('page_slug'); ?></p>
                         <label for="desc">Nội dung bài viết</label>
                         <textarea name="page_content" id="desc" class="ckeditor"></textarea>
                         <p class="error"> <?php echo form_error('page_content'); ?></p>

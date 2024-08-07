@@ -46,19 +46,19 @@ function get_number_product_by_id($start, $num_per_page, $id, $key = "")
     }
     return $data_product;
 }
-//Lấy tên danh mục theo $id từ bảng product_categories
-function get_name_category_by_id($id)
-{
-    $sql = "SELECT `category_name` FROM `product_categories` WHERE `category_id` = $id";
-    $name_cat = db_fetch_row($sql);
-    return $name_cat;
-}
 //Lấy số lượng bản ghi lấy ra theo category_id
 function get_count_product($start, $num_per_page, $id)
 {
     $sql = "SELECT * FROM `products` WHERE `category_id` = '$id' AND NOT product_status = 'inactive' LIMIT {$start}, {$num_per_page}";
 
     return db_num_rows($sql);
+}
+//Lấy tên danh mục theo $id từ bảng product_categories
+function get_name_category_by_id($id)
+{
+    $sql = "SELECT `category_name` FROM `product_categories` WHERE `category_id` = $id";
+    $name_cat = db_fetch_row($sql);
+    return $name_cat;
 }
 
 #-----------SẢN PHẨM VÀ LỌC THEO GIÁ VÀ HÃNG-----------

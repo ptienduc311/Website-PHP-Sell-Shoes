@@ -3,7 +3,7 @@ get_header("account");
 ?>
 
 <div class="container" id="container">
-    <a class="btn-home icon" href="?mod=home"><i class="fa-solid fa-house"></i></a>
+    <a class="btn-home icon" href="trang-chu"><i class="fa-solid fa-house"></i></a>
     <div class="form-container sign-in">
         <form method="POST">
             <h1>Bạn quên mật khẩu?</h1>

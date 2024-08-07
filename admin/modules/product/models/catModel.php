@@ -26,7 +26,7 @@ function get_all_data_cat(){
 function data_tree($list_data, $parent_id = 0, $level = 0)
 {
     $result = [];
-    foreach ($list_data as  $item) {
+    foreach ($list_data as $item) {
         $item['btn_delete'] = "?mod=product&controller=cat&action=deleteCat&id={$item['category_id']}";
         if ($item['parent_id'] == $parent_id) {
             $item['level'] = $level;

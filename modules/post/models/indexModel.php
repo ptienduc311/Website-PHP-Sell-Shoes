@@ -64,10 +64,10 @@ function get_category_post_once()
     return db_fetch_row($sql);
 }
 
-//Lấy thông tin từ bảng post theo $id
-function get_data_post_by_id($id)
+//Lấy thông tin từ bảng post theo $post_slug
+function get_data_post_by_post_slug($post_slug)
 {
-    $sql = "SELECT * FROM `post` WHERE `post_id` = $id";
+    $sql = "SELECT * FROM `post` WHERE `post_slug` = '$post_slug'";
     $data_post = db_fetch_row($sql);
     $data_post['name_category'] = get_category_post_once($data_post['category_id']);
     return $data_post;

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <base href="<?php echo base_url(); ?>" />
     <title>SHOES STORE</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,16 +40,16 @@
                                     <a href="?" title="">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=product" title="">Sản phẩm</a>
+                                    <a href="san-pham" title="">Sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=post" title="">Blog</a>
+                                    <a href="bai-viet" title="">Bài viết</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=page&action=contact" title="">Liên hệ</a>
+                                    <a href="lien-he.html" title="">Liên hệ</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=page&action=introduce" title="">Giới thiệu</a>
+                                    <a href="gioi-thieu.html" title="">Giới thiệu</a>
                                 </li>
                             </ul>
                         </div>
@@ -164,10 +165,10 @@
                                     </div>
                                     <div class="button-group">
                                         <div class="login-btn">
-                                            <a href="?mod=users&action=login">Đăng nhập ngay</a>
+                                            <a href="dang-nhap">Đăng nhập ngay</a>
                                         </div>
                                         <div class="register-btn">
-                                            <a href="?mod=users&action=register">Đăng ký</a>
+                                            <a href="dang-ky">Đăng ký</a>
                                         </div>
                                     </div>
                                 </div>

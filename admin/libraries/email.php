@@ -49,7 +49,7 @@ function send_mail($sent_to_email, $sent_to_fullname, $subject, $content, $optio
         //    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
-        echo 'Email đã được gửi thành công';
+        // echo 'Email đã được gửi thành công';
     } catch (Exception $e) {
         echo "Email không được gửi. Chi tiết lỗi: {$mail->ErrorInfo}";
     }

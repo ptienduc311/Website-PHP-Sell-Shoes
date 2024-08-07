@@ -4,6 +4,7 @@
 <head>
     <title>Quản lý SHOES STORE</title>
     <meta charset="UTF-8">
+    <base href="<?php echo base_url(); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="public/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="public/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
@@ -29,61 +30,61 @@
                     <a href="?mod=home" title="" id="logo" class="fl-left">ADMIN</a>
                     <ul id="main-menu" class="fl-left">
                         <li>
-                            <a href="?mod=page" title="">Trang</a>
+                            <a href="trang" title="">Trang</a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="?mod=page&action=add" title="">Thêm mới</a>
+                                    <a href="trang/them.html" title="">Thêm mới</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=page" title="">Danh sách trang</a>
+                                    <a href="trang" title="">Danh sách trang</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="?mod=post" title="">Bài viết</a>
+                            <a href="bai-viet" title="">Bài viết</a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="?mod=post&controller=index&action=add" title="">Thêm bài viết mới</a>
+                                    <a href="bai-viet/them.html" title="">Thêm bài viết mới</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=post" title="">Danh sách bài viết</a>
+                                    <a href="bai-viet" title="">Danh sách bài viết</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=post&controller=index&action=addCat" title="">Thêm danh mục mới</a>
+                                    <a href="them-danh-muc-bai-viet.html" title="">Thêm danh mục mới</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=post&controller=index&action=category" title="">Danh mục bài viết</a>
+                                    <a href="danh-muc-bai-viet" title="">Danh mục bài viết</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="?mod=product" title="">Sản phẩm</a>
+                            <a href="san-pham" title="">Sản phẩm</a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="?mod=product&action=add" title="">Thêm sản phẩm mới</a>
+                                    <a href="san-pham/them.html" title="">Thêm sản phẩm mới</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=product" title="">Danh sách sản phẩm</a>
+                                    <a href="san-pham" title="">Danh sách sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=product&controller=cat&action=addCat" title="">Thêm danh mục sản phẩm</a>
+                                    <a href="them-danh-muc-san-pham.html" title="">Thêm danh mục sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=product&controller=cat&action=category" title="">Danh mục sản phẩm</a>
+                                    <a href="danh-muc-san-pham" title="">Danh mục sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=product&controller=cat&action=size" title="">Thêm size giày mới</a>
+                                    <a href="them-size.html" title="">Thêm size giày mới</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="?mod=sell&action=order" title="">Bán hàng</a>
+                            <a href="danh-sach-don-hang" title="">Bán hàng</a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="?mod=sell&action=order" title="">Danh sách đơn hàng</a>
+                                    <a href="danh-sach-don-hang" title="">Danh sách đơn hàng</a>
                                 </li>
                                 <li>
-                                    <a href="?mod=sell&action=customer" title="">Danh sách khách hàng</a>
+                                    <a href="danh-sach-khach-hang" title="">Danh sách khách hàng</a>
                                 </li>
                             </ul>
                         </li>

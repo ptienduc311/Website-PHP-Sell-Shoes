@@ -21,6 +21,7 @@ function infoAction(){
         ];
         // show_array($data);
         updateCustomerInfo($data, $_SESSION['username']);
+        echo "<script>alert('Cập nhật dữ liệu thành công')</script>";
     }
     if(isset($_POST['btn-reset'])){
         $password_current = $_POST['password-current'];

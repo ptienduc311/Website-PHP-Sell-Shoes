@@ -88,7 +88,7 @@ function delete_cat_by_id($id)
 }
 
 //Cập nhật tất cả bài viết có $category_id = 3 (Danh mục khác)
-function update_cateory_id_post($category_id)
+function update_category_id_post($category_id)
 {
     $sql = "UPDATE `post` SET `category_id` = 3 WHERE `category_id` = '$category_id'";
     db_query($sql);

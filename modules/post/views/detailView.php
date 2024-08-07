@@ -3,8 +3,8 @@ get_header();
 $data_product_cat = get_data_product_cat();
 $data_product_selling = get_selling_products();
 
-$id=$_GET['id'];
-$data_post = get_data_post_by_id($id);
+$slug=$_GET['slug'];
+$data_post = get_data_post_by_post_slug($slug);
 ?>
 
 <div id="main-content-wp" class="home-page clearfix">

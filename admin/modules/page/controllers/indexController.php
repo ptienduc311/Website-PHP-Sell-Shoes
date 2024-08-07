@@ -13,13 +13,19 @@ function indexAction()
 #---------------THÊM BÀI VIẾT----------------
 function addAction()
 {
-    global $page_title, $page_content, $page_status, $error;
+    global $page_title, $page_slug, $page_content, $page_status, $error;
     if (isset($_POST['btn_add'])) {
         #Valdation title trang
         if (empty($_POST['page_title'])) {
             $error['page_title'] = "Vui lòng nhập tiêu đề trang";
         } else {
             $page_title = $_POST['page_title'];
+        }
+        #Valdation slug
+        if (empty($_POST['page_slug'])) {
+            $error['page_slug'] = "Vui lòng nhập slug trang";
+        } else {
+            $page_slug = $_POST['page_slug'];
         }
         #Validation nội dung tiêu đề  
         if (empty($_POST['page_content'])) {
@@ -36,6 +42,7 @@ function addAction()
         if(empty($error)){
             $data=[
                 'page_title'=>$page_title,
+                'page_slug'=>$page_slug,
                 'page_content' =>$page_content,
                 'page_status'=>$page_status,
                 'created_by'=>$_SESSION['username']
@@ -60,6 +67,12 @@ function updateAction(){
         } else {
             $page_title = $_POST['page_title'];
         }
+        #Valdation slug
+        if (empty($_POST['page_slug'])) {
+            $error['page_slug'] = "Vui lòng nhập slug trang";
+        } else {
+            $page_slug = $_POST['page_slug'];
+        }
         #Validation nội dung tiêu đề  
         if (empty($_POST['page_content'])) {
             $error['page_content'] = "Vui lòng nhập nội dung bài viết";
@@ -75,6 +88,7 @@ function updateAction(){
         if(empty($error)){
             $data=[
                 'page_title'=>$page_title,
+                'page_slug'=>$page_slug,
                 'page_content' =>$page_content, 
                 'page_status'=>$page_status
             ];

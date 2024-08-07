@@ -165,7 +165,7 @@ function delete_images($image_id){
 
 //Xóa bảng products theo product_id
 function delete_product($product_id){
-    $where = "`product_id` = $product_id";
+    $where = "`product_id` = '$product_id'";
     db_delete('products', $where);
 }
 

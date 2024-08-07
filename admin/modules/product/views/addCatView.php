@@ -19,6 +19,9 @@ $list_name_category = show_data_cat_by_parent_id();
                         <label for="category_name">Tên danh mục sản phẩm</label>
                         <input type="text" name="category_name" id="category_name">
                         <p class="error"> <?php echo form_error('category_name'); ?></p>
+                        <label for="category_slug">Slug danh mục sản phẩm</label>
+                        <input type="text" name="category_slug" id="category_slug">
+                        <p class="error"> <?php echo form_error('category_slug'); ?></p>
                         <label for="desc">Mô tả ngắn danh mục</label>
                         <textarea name="category_desc" id="desc" class="ckeditor"></textarea>
                         <p class="error"> <?php echo form_error('category_desc'); ?></p>

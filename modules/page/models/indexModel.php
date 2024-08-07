@@ -1,16 +1,16 @@
 <?php
 
-//Lấy dữ liệu trang liên hệ từ bảng page
-function get_data_contact(){
-    $sql = "SELECT * FROM `page` WHERE `page_id` = 1";
+//Lấy dữ liệu trang từ bảng page
+function get_data_page($slug){
+    $sql = "SELECT * FROM `page` WHERE `page_slug` = '$slug'";
     return db_fetch_row($sql);
 }
 
-//Lấy dữ liệu trang giới thiệu từ bảng page
-function get_data_introduce(){
-    $sql = "SELECT * FROM `page` WHERE `page_id` = 2";
-    return db_fetch_row($sql);
-}
+// //Lấy dữ liệu trang giới thiệu từ bảng page
+// function get_data_introduce(){
+//     $sql = "SELECT * FROM `page` WHERE `page_id` = 2";
+//     return db_fetch_row($sql);
+// }
 
 //Lấy thông tin sản phẩm bán chạy
 function get_selling_products()

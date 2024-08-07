@@ -1,6 +1,7 @@
 <?php
 get_header();
-$data_introduce = get_data_introduce();
+$slug = $_GET['slug'];
+$data_introduce = get_data_page($slug);
 $data_product_selling = get_selling_products();
 ?>
 

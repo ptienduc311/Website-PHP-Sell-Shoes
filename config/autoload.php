@@ -32,7 +32,7 @@ $autoload['lib'] = array();
  */
 
 
-$autoload['helper'] = array('data', 'url', 'users', 'format', 'pagging');
+$autoload['helper'] = array('data', 'url', 'users', 'format', 'pagging', 'slug');
 
 
 

@@ -25,6 +25,10 @@ $data_size = get_all_size();
                         <input type="text" name="product_code" id="product_code">
                         <p class="error"> <?php echo form_error('product_code'); ?></p>
 
+                        <label for="product_slug">Slug sản phẩm</label>
+                        <input type="text" name="product_slug" id="product_slug">
+                        <p class="error"> <?php echo form_error('product_slug'); ?></p>
+
                         <label for="product_initial">Giá ban đầu của sản phẩm</label>
                         <input type="text" name="product_initial" id="product_initial">
                         <p class="error"> <?php echo form_error('product_initial'); ?></p>

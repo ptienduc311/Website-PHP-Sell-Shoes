@@ -22,7 +22,6 @@ require COREPATH . DIRECTORY_SEPARATOR . 'base.php';
 
 
 
-
 if (is_array($autoload)) {
     foreach ($autoload as $type => $list_auto) {
         if (!empty($list_auto)) {

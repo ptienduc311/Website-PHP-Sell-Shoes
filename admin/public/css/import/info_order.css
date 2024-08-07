@@ -97,9 +97,9 @@
     text-align: center;
 }
 
-img {
-    max-width: 50px;
-    max-height: 50px;
+img#proudct-thumb-img {
+    width: 70px;
+    height: 80px;
 }
 
 /* Màu trạng thái đơn hàng */

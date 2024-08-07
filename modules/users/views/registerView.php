@@ -30,7 +30,7 @@ get_header("account");
                 <h1>Xin chào!</h1>
                 <p>Bạn đã là thành viên!</p><br>
                 <p>Hãy đăng nhập để cùng nhau khám phá ngay</p>
-                <a href="?mod=users&action=login"><button class="hidden" id="login">Đăng nhập</button></a>
+                <a href="dang-nhap"><button class="hidden" id="login">Đăng nhập</button></a>
             </div>
         </div>
     </div>

@@ -23,6 +23,9 @@ get_header();
                     <label for="title">Tiêu đề</label>
                         <input type="text" name="page_title" id="title" value="<?php echo $data['page_title']; ?>">
                         <p class="error"> <?php echo form_error('page_title'); ?></p>
+                        <label for="slug">Slug ( Friendly_url )</label>
+                        <input type="text" name="page_slug" id="slug" value="<?php echo $data['page_slug']; ?>">
+                        <p class="error"> <?php echo form_error('page_slug'); ?></p>
                         <label for="desc">Nội dung bài viết</label>
                         <textarea name="page_content" id="desc" class="ckeditor"><?php echo $data['page_content']; ?></textarea>
                         <p class="error"> <?php echo form_error('page_content'); ?></p>

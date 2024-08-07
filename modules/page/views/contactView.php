@@ -1,6 +1,7 @@
 <?php
 get_header();
-$data_contact = get_data_contact();
+$slug = $_GET['slug'];
+$data_contact = get_data_page($slug);
 $data_product_selling = get_selling_products();
 ?>
 
@@ -82,5 +83,5 @@ $data_product_selling = get_selling_products();
 
 <?php
 get_footer();
-// show_array($data_contact);
+show_array($data_contact);
 ?>
